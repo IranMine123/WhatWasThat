@@ -47,6 +47,27 @@ public final class PerceptionManager {
         return memory.result();
     }
 
+    public static DetectionResult getResult(
+            LivingEntity observer,
+            LivingEntity target
+    ) {
+        PerceptionKey key = new PerceptionKey(
+                observer.getUUID(),
+                target.getUUID()
+        );
+
+        PerceptionMemory memory = MEMORIES.get(key);
+
+        if (memory == null) {
+            return new DetectionResult(
+                    0.0F,
+                    PerceptionState.UNAWARE
+            );
+        }
+
+        return memory.result();
+    }
+
     public static void forget(
             LivingEntity observer,
             LivingEntity target
