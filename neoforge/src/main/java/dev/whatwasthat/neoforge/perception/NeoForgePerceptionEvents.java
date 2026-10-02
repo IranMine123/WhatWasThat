@@ -1,8 +1,6 @@
 package dev.whatwasthat.neoforge.perception;
 
-import dev.whatwasthat.perception.DetectionResult;
-import dev.whatwasthat.perception.PerceptionManager;
-import dev.whatwasthat.perception.PerceptionState;
+import dev.whatwasthat.perception.*;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
@@ -27,6 +25,8 @@ public final class NeoForgePerceptionEvents {
         }
 
         evaluatePlayers(mob);
+
+        InvestigationController.tick(mob);
     }
 
     private static void evaluatePlayers(Mob mob) {
@@ -55,6 +55,13 @@ public final class NeoForgePerceptionEvents {
             ServerPlayer player,
             DetectionResult result
     ) {
+        InvestigationManager.update(
+                mob,
+                player.getUUID(),
+                result.state(),
+                player.position()
+        );
+
         System.out.println(
                 "[What Was That?] "
                         + mob.getName().getString()
@@ -64,6 +71,8 @@ public final class NeoForgePerceptionEvents {
                         + String.format("%.2f", result.detection())
                         + " | state="
                         + result.state()
+                        + " | investigating="
+                        + InvestigationManager.isInvestigating(mob)
         );
     }
 }
