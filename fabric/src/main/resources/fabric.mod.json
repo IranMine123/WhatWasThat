@@ -3,23 +3,23 @@
   "id": "whatwasthat",
   "version": "${version}",
   "name": "What was That?",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Add stealth mode to Minecraft, you have to be quiet around hostiles!",
   "authors": [
-    "Me!"
+    "IranMine123"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://modrinth.com/mod/what-was-that",
+    "sources": "https://github.com/IranMine123/WhatWasThat"
   },
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/whatwasthat/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.fabric.WhatWasThatFabric"
+      "dev.whatwasthat.fabric.WhatWasThatFabric"
     ],
     "client": [
-      "dev.fabric.client.WhatWasThatFabricClient"
+      "dev.whatwasthat.fabric.client.WhatWasThatFabricClient"
     ]
   },
   "mixins": [
@@ -31,8 +31,5 @@
     "java": ">=21",
     "architectury": ">=13.0.11",
     "fabric-api": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

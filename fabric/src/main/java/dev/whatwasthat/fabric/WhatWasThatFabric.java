@@ -1,8 +1,8 @@
-package dev.fabric;
+package dev.whatwasthat.fabric;
 
 import net.fabricmc.api.ModInitializer;
 
-import dev.WhatWasThat;
+import dev.whatwasthat.WhatWasThat;
 
 public final class WhatWasThatFabric implements ModInitializer {
     @Override

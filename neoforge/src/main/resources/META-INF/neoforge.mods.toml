@@ -1,15 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "MIT"
 
 [[mods]]
 modId = "whatwasthat"
 version = "${version}"
 displayName = "What was That?"
-authors = "Me!"
+authors = "IranMine123"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Add stealth mode to Minecraft, you have to be quiet around hostiles!
 '''
 #logoFile = ""
 

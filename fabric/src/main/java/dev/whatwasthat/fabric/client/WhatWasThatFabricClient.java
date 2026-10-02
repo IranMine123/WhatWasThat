@@ -1,4 +1,4 @@
-package dev.fabric.client;
+package dev.whatwasthat.fabric.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
